@@ -196,7 +196,7 @@ function instadl_post(){
             fi
         elif [[ $dl_mode == "PROFILE" ]]
         then
-            instaloader $dl_login_text $dl_opt_text --dirname-pattern={profile} $i
+            instaloader $dl_login_text $dl_opt_text --dirname-pattern=downloads/{profile} $i
             echo "Press Enter(↵) to Continue"
             read a
             clear

@@ -1,6 +1,6 @@
 FROM python:3.9
 
-COPY src/instadl.sh /downloads/
+COPY src/instadl.sh /
 
 RUN apt-get update -q -y \
     && apt-get install -q -y --no-install-recommends \
@@ -25,6 +25,6 @@ RUN pip install -U flask instaloader
 
 VOLUME /downloads/
 
-CMD [ "/bin/bash", "/downloads/instadl.sh" ]
+CMD [ "/bin/bash", "/instadl.sh" ]
 
 EXPOSE 80
