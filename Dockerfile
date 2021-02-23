@@ -1,5 +1,7 @@
 FROM python:3.9
 
+COPY src/instadl.sh /
+
 RUN apt-get update -q -y \
     && apt-get install -q -y --no-install-recommends \
         ca-certificates \
@@ -21,7 +23,8 @@ RUN apt-get update -q -y \
 
 RUN pip install -U flask instaloader
 
-VOLUME /app/
 VOLUME /downloads/
+
+CMD [ "/bin/bash", "/instadl.sh" ]
 
 EXPOSE 80
