@@ -25,8 +25,8 @@ RUN pip install -U flask instaloader jupyterlab
 
 VOLUME /downloads/
 
-//CMD [ "cd", "/downloads/" ]
-//CMD [ "/bin/bash", "/instadl.sh" ]
-CMD [ "jupyter-lab" ]
+#CMD [ "cd", "/downloads/" ]
+#CMD [ "/bin/bash", "/instadl.sh" ]
+CMD [ "/bin/bash", "jupyter-lab" ]
 
 EXPOSE 8888
