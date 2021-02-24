@@ -21,10 +21,12 @@ RUN apt-get update -q -y \
         unzip \
         git
 
-RUN pip install -U flask instaloader
+RUN pip install -U flask instaloader jupyterlab
 
 VOLUME /downloads/
 
-CMD [ "/bin/bash", "/instadl.sh" ]
+//CMD [ "cd", "/downloads/" ]
+//CMD [ "/bin/bash", "/instadl.sh" ]
+CMD [ "/bin/bash", "jupyter-lab"]
 
-EXPOSE 80
+EXPOSE 8888
