@@ -27,6 +27,6 @@ VOLUME /downloads/
 
 //CMD [ "cd", "/downloads/" ]
 //CMD [ "/bin/bash", "/instadl.sh" ]
-CMD [ "/bin/bash", "jupyter-lab"]
+CMD [ "jupyter-lab" ]
 
 EXPOSE 8888
