@@ -28,4 +28,4 @@ VOLUME /downloads/
 #CMD [ "cd", "/downloads/" ]
 #CMD [ "/bin/bash", "/instadl.sh" ]
 EXPOSE 8888
-CMD [ "jupyter-lab", "server", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root" ]
+CMD [ "jupyter-lab", "downloads", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root" ]
